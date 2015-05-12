@@ -1,0 +1,32 @@
+/* 
+    Created on : May 11, 2015, 8:38:04 PM
+    Author     : cleber
+*/
+body{
+    font-family: arial, sans-serif, helvetica;
+    margin: 0px;
+}
+
+header {
+    background: #6699FF;
+}
+
+#logo{
+    color: white;
+    padding: 10px;
+}
+
+#image_view{
+    background: orange;
+}
+
+
+footer {
+    text-align: center;
+    color: white;
+    background: #6699FF;
+    padding: 10px;
+    margin: 0px;
+    bottom: 0;
+    position: inherit;
+}
