@@ -19,7 +19,23 @@ header {
 #image_view{
     background: orange;
 }
-
+#maior{
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    width: 800px;
+    height: 600px;
+    padding: 20px;
+}
+#scroll{
+    text-align: center;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    width: 400px;
+    height: 300px;
+    
+}
 
 footer {
     text-align: center;
