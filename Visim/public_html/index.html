@@ -4,69 +4,13 @@
         <meta charset="UTF-8">
 
         <link rel="stylesheet" type="text/css" href="css/main.css">
-
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-        <script src="js/jquery.js"></script>
-        <script src="js/jquery-ui.js"></script>
-        <script lang="javascript" type="text/javascript">
-            $(function () {
-                $("#image_url_file").change(function (event) {
-                    var value = $("#image_url_file").val();
-                    $("#image_url_text").val(value);
-                });
-
-                $("#image_url_text").change(function (event) {
-                    var value = $("#image_url_text").val();
-                    $("#image_url_file").attr("src", value);
-                });
-
-                $("#carregarImagem").click(function (event) {
-                    var image_url = $("#image_url_text").val();
-                    if (image_url != "") {
-                        var reader = new FileReader();
-                        reader.onload = getLoadedImage;
-                        try {
-                            var xhr = new XMLHttpRequest();
-                            xhr.onreadystatechange = function () {
-                                if (this.readyState == 4 && this.status == 200) {
-                                    console.log(this.response, typeof this.response);
-                                    //var url = window.URL || window.webkitURL;
-                                    //$("#image").attr("src", url.createObjectURL(this.response))
-
-                                    reader.readAsDataURL(this.response);
-                                }
-                            }
-                            xhr.open('GET', image_url);
-                            xhr.responseType = 'blob';
-                            xhr.send();
-                        } catch (error) {
-                            try {
-                                reader.readAsDataURL($("#image_url_file").prop("files")[0]);
-                            } catch (error2) {
-                                alert("Não foi possível carregar a imagem.");
-                            }
-                        }
-
-                    }else{
-                        alert("Por favor, especifique uma imagem para visualização!");
-                    }
-
-
-
-
-                    /**
-                     console.log($("#image_url_file").prop("files")[0]);
-                     var reader = new FileReader();
-                     reader.onload = getLoadedImage;
-                     reader.readAsDataURL($("#image_url_file").prop("files")[0]);
-                     **/
-                });
-            });
-
-            function getLoadedImage(event) {
-                $("#image").attr("src", event.target.result)
-            }
-        </script>
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+        <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
+        
+        <script language="javascript" type="text/javascript" src="js/jquery.js"></script>
+        <script language="javascript" type="text/javascript" src="js/jquery-ui.js"></script>
+        <script language="javascript" type="text/javascript" src="js/load_image.js"></script>
+        <script language="javascript" type="text/javascript" src="js/drag.js"></script>
     </head>
 
     <body>
@@ -76,11 +20,11 @@
         <table>
             <tr>
                 <td>Imagem:</td>
-                <td><input type="text" id="image_url_text"></td>
+                <td>Via Arquivo: <input type="file" id="image_url_file"></td>
             </tr>
             <tr>
                 <td></td>
-                <td><input type="file" id="image_url_file" accept="image/jpeg image/png"></td>
+                <td>Via URL: <input type="text" id="image_url_text"></td>
             </tr>
         </table>
         <input type="submit" value="Carregar Imagem" id="carregarImagem"/>
@@ -89,32 +33,6 @@
         <button id="ZoomOut"> Zoom Out </button>
         <div id="maior">
             <img src="img/visim_logo.png" id="image"/>
-            <!-- Desenvolvido por Cleber de Souza Alcântara <br/>
-            Desenvolvimento de Software para Web | Engenharia de Software <br/>
-            Instituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza Alcântara <br/>Instituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza AlcântaraInstituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza AlcântaraInstituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza AlcântaraInstituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza AlcântaraInstituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza AlcântaraInstituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza AlcântaraInstituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza AlcântaraInstituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza AlcântaraInstituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza AlcântaraInstituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza AlcântaraInstituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza AlcântaraInstituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza AlcântaraInstituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza AlcântaraInstituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza AlcântaraInstituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza AlcântaraInstituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza AlcântaraInstituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza AlcântaraInstituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza AlcântaraInstituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza AlcântaraInstituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza AlcântaraInstituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza AlcântaraInstituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza Alcântara
-            Desenvolvimento de Software para Web | Engenharia de Software <br/>
-            Instituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza Alcântara <br/>
-            Desenvolvimento de Software para Web | Engenharia de Software <br/>
-            Instituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza Alcântara <br/>
-            Desenvolvimento de Software para Web | Engenharia de Software <br/>
-            Instituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza Alcântara <br/>
-            Desenvolvimento de Software para Web | Engenharia de Software <br/>
-            Instituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza Alcântara <br/>
-            Desenvolvimento de Software para Web | Engenharia de Software <br/>
-            Instituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza Alcântara <br/>
-            Desenvolvimento de Software para Web | Engenharia de Software <br/>
-            Instituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza Alcântara <br/>
-            Desenvolvimento de Software para Web | Engenharia de Software <br/>
-            Instituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza Alcântara <br/>
-            Desenvolvimento de Software para Web | Engenharia de Software <br/>
-            Instituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza Alcântara <br/>
-            Desenvolvimento de Software para Web | Engenharia de Software <br/>
-            Instituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza Alcântara <br/>
-            Desenvolvimento de Software para Web | Engenharia de Software <br/>
-            Instituto de Informática | Universidade Federal de GoiásDesenvolvido por Cleber de Souza Alcântara <br/>
-            Desenvolvimento de Software para Web | Engenharia de Software <br/>
-            Instituto de Informática | Universidade Federal de Goiás -->
-
         </div>
         <footer>
             Desenvolvido por Cleber de Souza Alcântara <br/>

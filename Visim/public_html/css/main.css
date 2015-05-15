@@ -16,25 +16,20 @@ header {
     padding: 10px;
 }
 
-#image_view{
-    background: orange;
+#image{
+    background: gray;
 }
 #maior{
     border-color: black;
     border-width: 1px;
     border-style: solid;
-    width: 800px;
-    height: 600px;
-    padding: 20px;
-}
-#scroll{
-    text-align: center;
-    border-color: black;
-    border-width: 1px;
-    border-style: solid;
-    width: 400px;
+    width: 300px;
     height: 300px;
     
+    //overflow: hidden;
+    overflow: scroll;
+    
+    text-align: center;
 }
 
 footer {
