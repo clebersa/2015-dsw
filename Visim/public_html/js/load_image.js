@@ -72,12 +72,26 @@ $(function () {
                 reader.onloadend = function () {
                     $("image").attr("src", this.result);
                     alignImage();
+                    setImageDrag();
                 }
             } catch (error2) {
                 alert("Não foi possível carregar a imagem.");
             }
         }
     });
+
+    $("#center_image").click(function (event) {
+        alignImage();
+    });
+
+    $('#maior').resizable();
+
+    $("#image").mousedown(function () {
+        $(window).mousemove(function () {
+            setImageDrag();
+        });
+    });
+
 });
 
 function getLoadedImage(event) {
@@ -85,15 +99,39 @@ function getLoadedImage(event) {
 }
 
 function alignImage(event) {
+    var ajusteHorizontal = ($("#maior").height() - $("#image").height()) / 2;
+    var ajusteVertical = ($("#maior").width() - $("#image").width()) / 2;
 
-    var ajusteHorizontal = ($("#image").height()) / 2;
-    var ajusteVertical = ($("#image").width()) / 2;
-
-    ajusteHorizontal = '-' + ajusteHorizontal + 'px';
-    ajusteVertical = '-' + ajusteVertical + 'px';
+    ajusteHorizontal = ajusteHorizontal + "px";
+    ajusteVertical = ajusteVertical + "px";
+    
+    //console.log("IMG:" + $("#image").width() + " x " + $("#image").height());
+    //console.log("DIV:" + $("#maior").width() + " x " + $("#maior").height());
 
     $("#image").addClass("js-fix").css({
         "margin-left": ajusteHorizontal,
         "margin-top": ajusteVertical
     });
+}
+
+function setImageDrag() {
+    var alturaDiv = $("#maior").innerHeight();
+    var larguraDiv = $("#maior").innerWidth();
+    var alturaImagem = $("#image").innerHeight();
+    var larguraImagem = $("#image").innerWidth();
+
+    if (alturaImagem > alturaDiv || larguraImagem > larguraDiv) {
+        if (alturaImagem > alturaDiv) {
+            if (larguraImagem > larguraDiv) {
+                $("#image").draggable({axis: "x,y"});
+            } else {
+                $("#image").draggable({axis: "y"});
+            }
+        } else {
+            $("#image").draggable({axis: "x"});
+        }
+        $("#image").draggable("enable");
+    } else {
+        $("#image").draggable("disable");
+    }
 }
