@@ -41,6 +41,7 @@ $(function () {
                             reader.readAsDataURL(this.response);
                             reader.onloadend = function () {
                                 $("image").attr("src", this.result);
+                                setImageDrag();
                                 alignImage();
                             }
                         } else {
@@ -71,8 +72,8 @@ $(function () {
                 reader.readAsDataURL(file);
                 reader.onloadend = function () {
                     $("image").attr("src", this.result);
-                    alignImage();
                     setImageDrag();
+                    alignImage();
                 }
             } catch (error2) {
                 alert("Não foi possível carregar a imagem.");
@@ -96,6 +97,10 @@ $(function () {
 
 function getLoadedImage(event) {
     $("#image").attr("src", event.target.result);
+    $("#image").css({
+        "width": "auto",
+        "height": "auto"
+    });
 }
 
 function alignImage(event) {
@@ -104,13 +109,12 @@ function alignImage(event) {
 
     ajusteHorizontal = ajusteHorizontal + "px";
     ajusteVertical = ajusteVertical + "px";
-    
-    //console.log("IMG:" + $("#image").width() + " x " + $("#image").height());
-    //console.log("DIV:" + $("#maior").width() + " x " + $("#maior").height());
 
-    $("#image").addClass("js-fix").css({
-        "margin-left": ajusteHorizontal,
-        "margin-top": ajusteVertical
+    console.log(ajusteHorizontal + " x " + ajusteVertical);
+
+    $("#image").css({
+        "top": ajusteHorizontal,
+        "left": ajusteVertical
     });
 }
 
@@ -132,6 +136,7 @@ function setImageDrag() {
         }
         $("#image").draggable("enable");
     } else {
+        $("#image").draggable();
         $("#image").draggable("disable");
     }
 }

@@ -1,23 +1,17 @@
-$("#ZoomIn").click(ZoomIn());
+$(function () {
+    $("#ZoomIn").click(function (event) {
+        var new_width = $("#image").width() * 1.2;
+        var new_height = $("#image").height() * 1.2;
+        $("#image").width(new_width);
+        $("#image").height(new_height);
+        alignImage();
+    });
 
-$("#ZoomOut").click(ZoomOut());
-
-function ZoomIn(event) {
-
-    $("#div img").width(
-            $("#div img").width() * 1.2);
-
-    $("#div img").height(
-            $("#div img").height() * 1.2);
-}
-
-function  ZoomOut(event) {
-
-    $("#div img").width(
-            $("#imgDtls").width() * 0.5);
-
-    $("#div img").height(
-            $("#div img").height() * 0.5);
-}
-
-
+    $("#ZoomOut").click(function (event) {
+        var new_width = $("#image").width() * 0.9;
+        var new_height = $("#image").height() * 0.9;
+        $("#image").width(new_width);
+        $("#image").height(new_height);
+        alignImage();
+    });
+});
