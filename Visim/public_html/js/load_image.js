@@ -1,5 +1,5 @@
 $(function () {
-
+    
     $("#image_url_text").focus();
 
     $("#image_url_text").keyup(function (event) {
