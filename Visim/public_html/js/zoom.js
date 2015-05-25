@@ -4,7 +4,7 @@ $(function () {
     var min_zoom = 10;
     var max_zoom = 200;
 
-    $("#ZoomIn").click(function (event) {
+    $("#zoom-in").click(function (event) {
         if (current_zoom + zoom_level <= max_zoom) {
             applyZoom(100 * 100 / current_zoom);
             current_zoom += zoom_level;
@@ -16,7 +16,7 @@ $(function () {
         }
     });
 
-    $("#ZoomOut").click(function (event) {
+    $("#zoom-out").click(function (event) {
         if (current_zoom - zoom_level >= min_zoom) {
             applyZoom(100 * 100 / current_zoom);
             current_zoom -= zoom_level;

@@ -10,12 +10,12 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="863.3092"
-   height="127.99623"
+   width="147.99623"
+   height="205.62073"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="logo.svg"
+   sodipodi:docname="visim_logo.svg"
    inkscape:export-filename="/home/cleber/git/2015-dsw/Visim/public_html/img/visim_logo.png"
    inkscape:export-xdpi="90.002647"
    inkscape:export-ydpi="90.002647">
@@ -1539,8 +1539,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="213.55363"
-     inkscape:cy="153.53502"
+     inkscape:cx="182.47159"
+     inkscape:cy="141.91131"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1553,10 +1553,10 @@
      inkscape:snap-center="true"
      inkscape:snap-page="true"
      inkscape:object-nodes="true"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0" />
+     fit-margin-top="10"
+     fit-margin-left="10"
+     fit-margin-right="10"
+     fit-margin-bottom="10" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -1565,7 +1565,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1573,7 +1573,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0.10412375,-924.47254)">
+     transform="translate(10.104124,-914.47254)">
     <g
        id="g4049"
        transform="matrix(0.49999998,0,0,0.49999998,-0.0548503,526.23596)"
@@ -1634,8 +1634,8 @@
     <text
        xml:space="preserve"
        style="font-size:52.26472473px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#005ca1;fill-opacity:1;stroke:none;font-family:Sans"
-       x="128"
-       y="1013.9235"
+       x="63.963543"
+       y="1076.0479"
        id="text4045"
        sodipodi:linespacing="125%"
        inkscape:export-filename="/home/cleber/git/2015-dsw/Visim/public_html/img/g4049.png"
@@ -1643,8 +1643,13 @@
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4047"
-         x="128"
-         y="1013.9235"
-         style="font-size:75px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#005ca1;fill-opacity:1;font-family:Impact;-inkscape-font-specification:Impact Bold">Visualizador de Imagem</tspan></text>
+         x="66.160812"
+         y="1076.0479"
+         style="font-size:25px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;fill:#005ca1;fill-opacity:1;font-family:Impact;-inkscape-font-specification:Impact Bold">Visualizador </tspan><tspan
+         sodipodi:role="line"
+         x="63.963543"
+         y="1107.2979"
+         style="font-size:25px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;fill:#005ca1;fill-opacity:1;font-family:Impact;-inkscape-font-specification:Impact Bold"
+         id="tspan3254">de Imagens</tspan></text>
   </g>
 </svg>

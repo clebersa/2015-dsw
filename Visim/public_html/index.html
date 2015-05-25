@@ -5,7 +5,7 @@
 
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
-        
+
         <script language="javascript" type="text/javascript" src="js/jquery.js"></script>
         <script language="javascript" type="text/javascript" src="js/jquery-ui.js"></script>
         <script language="javascript" type="text/javascript" src="js/load_image.js"></script>
@@ -14,25 +14,50 @@
 
     <body>
         <header>
-            <div id = "logo"><img src="img/visim_logo.png"/></div>
+            <table>
+                <tr>
+                    <td rowspan="10"><img src="img/visim_logo.png"/></td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Selecione a Imagem...</b>
+                        <hr/>
+                        ... por arquivo: <input type="file" id="image_url_file">
+                        <br/>... ou por URL: <input type="text" id="image_url_text">
+
+                        <button id="carregarImagem" class="load-button">
+                            <img src="img/load.png" class="button-icon" 
+                                 alt="Carregar imagem" 
+                                 title="Carregar imagem"/><br/>
+                            Carregar Imagem
+                        </button>
+                        <b>Ferramentas:</b>
+                        <hr/>
+                        <button id="zoom-in" class="tool-button"> 
+                            <img src="img/zoom_in.png" class="button-icon" 
+                                 alt="Ampliar imagem (zoom in)" 
+                                 title="Ampliar imagem (zoom in)"/><br/>
+                            Zoom In
+                        </button>
+                        <button id="zoom-out" class="tool-button">
+                            <img src="img/zoom_out.png" class="button-icon" 
+                                 alt="Reduzir imagem (zoom out)"
+                                 title="Reduzir imagem (zoom out)"/><br/>
+                            Zoom Out
+                        </button>
+                        <button id="center_image" class="tool-button"> 
+                            <img src="img/center.png" class="button-icon" 
+                                 alt="Centralizar imagem"
+                                 title="Centralizar imagem"/><br/>
+                            Centralizar Imagem
+                        </button>
+                    </td>
+                </tr>
+            </table>
+
         </header>
-        <table>
-            <tr>
-                <td>Imagem:</td>
-                <td>Via Arquivo: <input type="file" id="image_url_file"></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>Via URL: <input type="text" id="image_url_text"></td>
-            </tr>
-        </table>
-        <input type="submit" value="Carregar Imagem" id="carregarImagem"/>
-        <br/>
-        <button id="center_image"> Centralizar Imagem </button>
-        <button id="ZoomIn"> Zoom In </button>
-        <button id="ZoomOut"> Zoom Out </button>
         <div id="maior">
-                <img id="image" class="js-fix"/>
+            <img id="image" class="js-fix"/>
         </div>
         <footer>
             Desenvolvido por Cleber de Souza Alcântara <br/>
