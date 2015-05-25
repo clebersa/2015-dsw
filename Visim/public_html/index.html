@@ -14,50 +14,47 @@
 
     <body>
         <header>
-            <table>
-                <tr>
-                    <td rowspan="10"><img src="img/visim_logo.png"/></td>
-                </tr>
-                <tr>
-                    <td>
-                        <b>Selecione a Imagem...</b>
-                        <hr/>
-                        ... por arquivo: <input type="file" id="image_url_file">
-                        <br/>... ou por URL: <input type="text" id="image_url_text">
+            <div class="main">
+                <div class="logo"><img src="img/visim_logo.png"/></div>
+                <div class="form">
+                    <b>Selecione a Imagem...</b>
+                    <hr/>
+                    ... por arquivo: <input type="file" id="image_url_file">
+                    <p>... ou por URL: <input type="text" id="image_url_text">
 
                         <button id="carregarImagem" class="load-button">
-                            <img src="img/load.png" class="button-icon" 
-                                 alt="Carregar imagem" 
-                                 title="Carregar imagem"/><br/>
                             Carregar Imagem
                         </button>
-                        <b>Ferramentas:</b>
-                        <hr/>
-                        <button id="zoom-in" class="tool-button"> 
-                            <img src="img/zoom_in.png" class="button-icon" 
-                                 alt="Ampliar imagem (zoom in)" 
-                                 title="Ampliar imagem (zoom in)"/><br/>
-                            Zoom In
-                        </button>
-                        <button id="zoom-out" class="tool-button">
-                            <img src="img/zoom_out.png" class="button-icon" 
-                                 alt="Reduzir imagem (zoom out)"
-                                 title="Reduzir imagem (zoom out)"/><br/>
-                            Zoom Out
-                        </button>
-                        <button id="center_image" class="tool-button"> 
-                            <img src="img/center.png" class="button-icon" 
-                                 alt="Centralizar imagem"
-                                 title="Centralizar imagem"/><br/>
-                            Centralizar Imagem
-                        </button>
-                    </td>
-                </tr>
-            </table>
-
+                </div>
+            </div>
         </header>
-        <div id="maior">
-            <img id="image" class="js-fix"/>
+        <div class="main">
+            <div class="tools">
+                <b>Ferramentas:</b>
+                <hr/>
+                <button id="zoom-in" class="tool-button"> 
+                    <img src="img/zoom_in.png" class="button-icon" 
+                         alt="Ampliar imagem (zoom in)" 
+                         title="Ampliar imagem (zoom in)"/><br/>
+                    Zoom In
+                </button>
+                <button id="zoom-out" class="tool-button">
+                    <img src="img/zoom_out.png" class="button-icon" 
+                         alt="Reduzir imagem (zoom out)"
+                         title="Reduzir imagem (zoom out)"/><br/>
+                    Zoom Out
+                </button>
+                <button id="center_image" class="tool-button"> 
+                    <img src="img/center.png" class="button-icon" 
+                         alt="Centralizar imagem"
+                         title="Centralizar imagem"/><br/>
+                    Centralizar Imagem
+                </button>
+            </div>
+
+            <div id="maior">
+                <img id="image" class="js-fix"/>
+            </div>
         </div>
         <footer>
             Desenvolvido por Cleber de Souza Alcântara <br/>
