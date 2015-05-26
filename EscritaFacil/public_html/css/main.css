@@ -1,0 +1,69 @@
+/* 
+    Created on : May 11, 2015, 8:38:04 PM
+    Author     : cleber
+*/
+body{
+    font-family: arial, sans-serif, helvetica;
+    font-size: 14px;
+    margin: 0px;
+    background-color: #EEE;
+}
+
+header {
+    background: #6699FF;
+    padding: 10px;
+    text-align: center;
+}
+
+.logo{
+    height: 100px;
+    margin: auto;
+}
+
+.content{
+    margin: auto;
+    padding: 10px;
+    width: 70%;
+    min-width: 200px;
+    background-color: #FFF;
+}
+
+p{
+    margin-bottom: 10px;
+}
+textarea{
+    margin: 0px;
+    padding: 10px 15px;
+
+    width: calc(100% - 32px);
+    width: -webkit-calc(100% - 32px);
+    width: -moz-calc(100% - 32px);
+    max-width: calc(100% - 32px);
+    max-width: -webkit-calc(100% - 32px);
+    max-width: -moz-calc(100% - 32px);
+
+    height: 300px;
+
+    text-align: justify;
+    font-family: arial, sans-serif, helvetica;
+    font-size: 14px;
+}
+
+select{
+    width: 100%;
+    margin-top: 10px;
+}
+
+option{
+    padding: 10px 15px;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    background: #6699FF;
+    padding: 10px;
+    margin: 0px;
+    bottom: 0;
+    position: inherit;
+}
