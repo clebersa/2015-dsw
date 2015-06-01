@@ -10,6 +10,10 @@ and open the template in the editor.
         <meta charset="UTF-8">
 
         <link rel="stylesheet" type="text/css" href="css/main.css">
+
+        <script language="javascript" type="text/javascript" src="js/jquery.js"></script>
+        <script language="javascript" type="text/javascript" src="js/ef_main.js"></script>
+
     </head>
     <body>
         <header>
@@ -17,25 +21,29 @@ and open the template in the editor.
         </header>
         <div class="content">
             <p><b>Texto</b></p>
-            <textarea class="text">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec semper congue mi efficitur dapibus. Suspendisse eu felis non nulla varius porttitor. Aliquam arcu nisl, tristique vel tincidunt quis, cursus vitae eros. Nunc quis lorem a massa malesuada mattis ut ac orci. Sed rhoncus cursus turpis, consequat elementum leo dictum ut. Curabitur quis egestas justo. Nunc rhoncus elit in auctor pharetra. Vivamus varius fringilla posuere. Proin dictum venenatis metus vel mollis. Integer ultricies odio a ligula fringilla posuere. Sed rutrum pharetra turpis, eget vulputate felis hendrerit ac.
-
-Suspendisse a consectetur elit. Phasellus nec hendrerit magna. Etiam in diam vitae eros luctus mattis. Nullam luctus, dui vel mattis varius, lacus nisi gravida augue, non accumsan sapien sem ultrices est. Nunc elementum nunc nunc, id tempor justo lacinia et. Pellentesque ut porta elit. Vivamus risus leo, posuere ac vulputate sed, facilisis sit amet tellus. Sed eget sapien tempus, aliquam ipsum eget, condimentum elit. Nulla vulputate ipsum lorem, interdum ornare arcu pellentesque vel. Nunc sagittis mattis sem.
-
-Vestibulum efficitur enim libero, consequat lacinia purus sagittis a. Aliquam porttitor sagittis dui, at tristique enim hendrerit sit amet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed sodales leo nunc, nec tempus mauris euismod nec. Integer nisi mauris, vulputate ut purus at, egestas scelerisque justo. Etiam porttitor justo eget nulla tincidunt volutpat. Integer euismod massa ac cursus malesuada. In id fringilla sem, id bibendum mi. Maecenas accumsan elit orci, sed mollis nisi auctor lacinia. Aenean fermentum facilisis ante, id consectetur odio pretium eget. Nulla sed enim a libero maximus tristique.
-
-Donec scelerisque augue nec elit cursus laoreet. In sed tempor massa. Vivamus malesuada nulla at posuere hendrerit. Duis eu nibh libero. Nulla semper et mi eu laoreet. Duis at mauris ornare urna malesuada pellentesque at sit amet nisl. Mauris ultrices massa lacus, id dignissim ex iaculis id. Phasellus luctus justo non eros venenatis, et ultrices ante placerat. Maecenas interdum ante quis libero faucibus, convallis auctor ligula imperdiet. Morbi nec massa arcu. Vivamus sit amet efficitur nisl.
-            </textarea>
+            <textarea class="text"></textarea>
             <p><b>Ajuda</b></p>
-            Arquivo de macros: <input type="file" id="dict-file">
-
-            <select size="5">
-                <option>Teste 1</option>
-                <option>Teste 2</option>
-                <option>Teste 3</option>
-                <option>Teste 4</option>
-                <option>Teste 5</option>
-                <option>Teste 6</option>
+            Arquivo de macros: <br/>
+            <table>
+                <tr>
+                    <td> 
+                        Via Arquivo:
+                    <td/>
+                    <td>
+                        <input type="file" id="dict-file">
+                    <td/>
+                </tr>
+                <tr>
+                    <td> 
+                        Via URL:
+                    <td/>
+                    <td>
+                        <input type="url" id="dict-url"> <button id="load-url">Carregar</button>
+                    <td/>
+                </tr>
+            </table>
+            <button id="clear">Limpar<br/>Ajuda</button>
+            <select size="5" id="help-select">
             </select>
         </div>
         <footer>

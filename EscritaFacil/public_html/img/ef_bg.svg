@@ -10,17 +10,29 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="147.99623"
-   height="205.62073"
+   width="90.764618"
+   height="31.120541"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="visim_logo.svg"
+   sodipodi:docname="ef_bg.svg"
    inkscape:export-filename="/home/cleber/git/2015-dsw/Visim/public_html/img/visim_logo.png"
    inkscape:export-xdpi="90.002647"
    inkscape:export-ydpi="90.002647">
   <defs
      id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4130">
+      <stop
+         style="stop-color:#e6e6e6;stop-opacity:1"
+         offset="0"
+         id="stop4132" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="1"
+         id="stop4134" />
+    </linearGradient>
     <linearGradient
        inkscape:collect="always"
        id="linearGradient3777">
@@ -1530,6 +1542,15 @@
        x2="133.44386"
        y2="-985.14111"
        gradientTransform="translate(-5.4438604,0.54629778)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4130"
+       id="linearGradient4136"
+       x1="308.35062"
+       y1="115.45206"
+       x2="308.35062"
+       y2="27.456003"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -1538,9 +1559,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4.4207605"
-     inkscape:cx="69.673939"
-     inkscape:cy="115.47845"
+     inkscape:zoom="3.1259497"
+     inkscape:cx="120.4567"
+     inkscape:cy="34.017728"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1550,13 +1571,13 @@
      inkscape:window-y="24"
      inkscape:window-maximized="1"
      width="1000px"
-     inkscape:snap-center="true"
+     inkscape:snap-center="false"
      inkscape:snap-page="true"
-     inkscape:object-nodes="true"
-     fit-margin-top="10"
-     fit-margin-left="10"
-     fit-margin-right="10"
-     fit-margin-bottom="10" />
+     inkscape:object-nodes="false"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -1565,7 +1586,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1573,79 +1594,49 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(10.104124,-914.47254)">
+     transform="translate(-144.25,-1012.0045)">
     <g
-       id="g4049"
-       transform="matrix(0.49999998,0,0,0.49999998,-0.0548503,526.23596)"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
-    <text
-       xml:space="preserve"
-       style="font-size:52.26472473px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#005ca1;fill-opacity:1;stroke:none;font-family:Sans"
-       x="202.35445"
-       y="987.15442"
-       id="text4045"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/cleber/git/2015-dsw/Visim/public_html/img/g4049.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         sodipodi:role="line"
-         id="tspan4047"
-         x="204.55171"
-         y="987.15442"
-         style="font-size:25px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;fill:#005ca1;fill-opacity:1;font-family:Impact;-inkscape-font-specification:Impact Bold">Visualizador </tspan><tspan
-         sodipodi:role="line"
-         x="202.35445"
-         y="1018.4044"
-         style="font-size:25px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;fill:#005ca1;fill-opacity:1;font-family:Impact;-inkscape-font-specification:Impact Bold"
-         id="tspan3254">de Imagens</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:65.42537689px;font-style:normal;font-weight:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#005ca1;fill-opacity:1;stroke:none;font-family:Sans"
-       x="19.629307"
-       y="981.19415"
-       id="text4045-0"
-       sodipodi:linespacing="100%"
-       inkscape:export-filename="/home/cleber/git/2015-dsw/Visim/public_html/img/g4049.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         sodipodi:role="line"
-         x="19.629307"
-         y="981.19415"
-         style="font-size:31.2951889px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;text-anchor:start;fill:#005ca1;fill-opacity:1;font-family:Impact;-inkscape-font-specification:Impact Bold"
-         id="tspan3281">Escrita</tspan><tspan
-         sodipodi:role="line"
-         x="19.629307"
-         y="1012.4893"
-         style="font-size:31.2951889px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;text-anchor:start;fill:#005ca1;fill-opacity:1;font-family:Impact;-inkscape-font-specification:Impact Bold"
-         id="tspan3329">F</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:65.42537689px;font-style:normal;font-weight:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#005ca1;fill-opacity:1;stroke:none;font-family:Sans"
-       x="19.629307"
-       y="1039.0725"
-       id="text4045-0-1"
-       sodipodi:linespacing="100%"
-       inkscape:export-filename="/home/cleber/git/2015-dsw/Visim/public_html/img/g4049.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         sodipodi:role="line"
-         x="19.629307"
-         y="1039.0725"
-         style="font-size:31.2951889px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;text-anchor:start;fill:#005ca1;fill-opacity:1;font-family:Impact;-inkscape-font-specification:Impact Bold"
-         id="tspan3329-7">Fácil</tspan></text>
-    <path
-       id="rect3357"
-       style="fill:none;stroke:#000000;stroke-width:7.49399996;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0"
-       d="m 3.7809429,1048.5812 -0.071927,-60.10933 c 0,-33.27692 26.9043545,-60.2532 60.1812855,-60.2532 33.276928,0 60.253209,26.97628 60.253209,60.25321 0,33.27692 -26.976281,60.18132 -60.217249,60.18132 z"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccsscc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 46.145906,64.69475 0,30.537732"
-       id="path4152"
-       inkscape:connector-curvature="0"
-       transform="translate(-10.104124,914.47254)"
-       sodipodi:nodetypes="cc" />
+       id="g3250-9"
+       transform="matrix(0.21787792,0,0,0.21787792,147.23463,811.94048)"
+       style="opacity:0.2">
+      <g
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         transform="matrix(0.49999998,0,0,0.49999998,-0.0548503,526.23596)"
+         id="g4049-2" />
+      <path
+         style="fill:url(#linearGradient4136);fill-opacity:1;stroke:none"
+         d="m 183.21875,26.71875 c -9.64701,0 -17.40625,7.75924 -17.40625,17.40625 l 0,53.375 -6.53125,26.15625 27.65625,-6.9375 325.625,0 c 9.64701,0 17.40625,-7.75924 17.40625,-17.40625 l 0,-55.1875 c 0,-9.64701 -7.75924,-17.40625 -17.40625,-17.40625 l -329.34375,0 z"
+         transform="translate(-150.03125,914.46875)"
+         id="rect4125"
+         inkscape:connector-curvature="0" />
+      <g
+         id="g4138"
+         transform="translate(4.5783495,0)">
+        <text
+           xml:space="preserve"
+           style="font-size:65.42537688999999546px;font-style:normal;font-weight:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#005ca1;fill-opacity:1;stroke:none;font-family:Sans"
+           x="19.629307"
+           y="1017.1941"
+           id="text4045-0-4"
+           sodipodi:linespacing="100%"
+           inkscape:export-filename="/home/cleber/git/2015-dsw/Visim/public_html/img/g4049.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90"><tspan
+             sodipodi:role="line"
+             x="19.629307"
+             y="1017.1941"
+             style="font-size:70px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;text-anchor:start;fill:#005ca1;fill-opacity:1;font-family:Impact;-inkscape-font-specification:Impact Bold"
+             id="tspan3329-9">Escrita F<tspan
+   id="tspan3333"
+   style="fill:#999999">ácil</tspan></tspan></text>
+        <path
+           style="fill:none;stroke:#000000;stroke-width:2.53636311999999986;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 259.96908,954.66648 0,68.21442"
+           id="path4152-5"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+    </g>
   </g>
 </svg>
