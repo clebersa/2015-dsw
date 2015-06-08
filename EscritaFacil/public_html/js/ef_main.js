@@ -77,21 +77,25 @@ $(function () {
     });
     
     var last_key = "";
+    var withoutReplace = "";
     $(".text").keyup(function (event) {
         var new_text = $(".text").val();
         var txts = $("textarea");
         console.log("Size: " + txts.length);
-        //HTMLTextAreaElement.rows
         console.log("Index: " + txts[0].rows);
-        
         var changed_index = getChanging(old_text, new_text);
+        console.log("NEW: " + new_text);
+        console.log("OLD: " + old_text);
+        console.log("Operation: " + changed_index.operation);
         if (changed_index.operation === null) {
             console.log(event.keyCode);
             switch (event.keyCode) {
                 case 27: //ESC
-                    if (automatic_complete === true) {
-                        //restore word
-                        automatic_complete = false;
+                    if (automatic_complete == true) {
+                        console.log("Reverting autocomplete...");
+                        $(".text").val(withoutReplace);
+                        new_text = withoutReplace;
+                        old_text = withoutReplace;
                     }
                     break;
                 case 38: //NAV UP
@@ -119,12 +123,12 @@ $(function () {
                     //go down in the list
                     break;
                 default:
-
-
             }
-
+            automatic_complete = false;
             console.log("No change made.");
             return;
+        } else {
+           automatic_complete = false; 
         }
 
         var begin;
@@ -142,7 +146,23 @@ $(function () {
         console.log("Palavra: " + word);
         
         if(event.keyCode == 32){
-            //Check match
+            var selected_option = $("#help-select option:selected");
+            console.log("Opção selecionada: " + selected_option.prop("id") + " | " 
+                    + selected_option.val());
+            if(word == selected_option.prop("id")){
+                console.log("Perfect match");
+                withoutReplace = new_text;
+                var withReplace = new_text.substring(0, begin) 
+                        + selected_option.val()
+                        + new_text.substring(changed_index.index, new_text.length);
+                //console.log("Without replace: " + withoutReplace);
+                //console.log("Without replace: " + withReplace);
+                $(".text").val(withReplace);
+                new_text = withReplace;
+                automatic_complete = true;
+            }else{
+                console.log("Not perfect match");
+            }
             fillHelp("");
         }else if(json != null){
             var newJSON = {};
@@ -150,14 +170,6 @@ $(function () {
                 if(json[key].chave.startsWith(word)){
                     newJSON[key] = json[key];
                 }
-            }
-            console.log("NEW JSON:");
-            for (var key in newJSON) {
-                console.log(key + ": " + newJSON[key].chave +" = "+ newJSON[key].texto);
-            }
-            console.log("JSON:");
-            for (var key in json) {
-                console.log(key + ": " + json[key].chave +" = "+ json[key].texto);
             }
             if(Object.keys(newJSON).length !== Object.keys(json).length){
                 console.log("JSON not equals");
