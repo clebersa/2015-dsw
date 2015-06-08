@@ -160,50 +160,16 @@ $(function () {
                 console.log(key + ": " + json[key].chave +" = "+ json[key].texto);
             }
             if(Object.keys(newJSON).length !== Object.keys(json).length){
-                console.log("Not equals");
+                console.log("JSON not equals");
                 fillHelp(newJSON);
             }else{
-                console.log("Equals");
+                console.log("JSON equals");
                 fillHelp("");
             }
         }
 
         console.log(event.keyCode);
-        switch (event.keyCode) {
-            case 27: //ESC
-                if (automatic_complete === true) {
-                    //restore word
-                    automatic_complete = false;
-                }
-                break;
-            case 32: //SPACE
-                //check exact match
-                //true
-                //replace text
-                //set automatic complete = true
-                //save the key (word/shortcut) for restoring
-                break;
-            case 38: //NAV UP
-                //check if is navigating
-                //true
-                //check if is in the top
-                //true
-                //focus on text, in the last position
-                //false
-                //go up in the list
-                break;
-            case 40://NAV DOWN
-                //check if is navigating
-                //false
-                //set is navigating = true
-                //go down in the list
-                break;
-            default:
-
-
-        }
-
-
+        
         old_text = new_text;
     });
 });
@@ -227,8 +193,17 @@ function fillHelp(json) {
         return;
 
     var select = $("#help-select");
+    var index = 0;
+    var selected;
+    var insert;
     for (var key in json) {
-        select.append("<option id = '" + json[key].chave + "'>" + json[key].texto + "</option>");
+        insert = "<option id = '" + json[key].chave + "'";
+        if(index == 0){
+            insert += "selected";
+        }
+        index++;
+        insert +=">" + json[key].texto + "</option>";
+        select.append(insert);
     }
 //    $.each(json, function (key, val) {
 //        select.append("<option id = '" + key + "'>" + val + "</option>");
