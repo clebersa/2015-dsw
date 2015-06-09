@@ -76,9 +76,46 @@ $(function () {
             }
     });
     
+    $(".text").keydown(function (event){
+        switch (event.keyCode) {
+            case 38: //NAV UP
+                var select_options = $("#help-select option");
+                var select = $("#help-select");
+                var selected_option = $("#help-select option:selected");
+                console.log("Select size: "+select_options.size());
+                console.log("Selected index: "+selected_option[0].index);
+                if(selected_option[0].index > 0){
+                    var value = select_options[selected_option[0].index - 1].value;
+                    console.log(value);
+                    select.val(value);
+                }
+                event.preventDefault();
+                break;
+            case 40: //NAV DOWN
+                var select_options = $("#help-select option");
+                var select = $("#help-select");
+                var selected_option = $("#help-select option:selected");
+                console.log("Select size: "+select_options.size());
+                console.log("Selected index: "+selected_option[0].index);
+                if(selected_option[0].index + 1 < select_options.size()){
+                    var value = select_options[selected_option[0].index + 1].value;
+                    console.log(value);
+                    select.val(value);
+                }
+                event.preventDefault();
+                break;
+            case 13: // ENTER
+                event.preventDefault();
+            break;
+            default:
+        }
+         
+    });
+    
     var last_key = "";
     var withoutReplace = "";
     $(".text").keyup(function (event) {
+        event.preventDefault();
         var new_text = $(".text").val();
         var txts = $("textarea");
         console.log("Size: " + txts.length);
@@ -87,48 +124,23 @@ $(function () {
         console.log("NEW: " + new_text);
         console.log("OLD: " + old_text);
         console.log("Operation: " + changed_index.operation);
+        
+        console.log(event.keyCode);
+        switch (event.keyCode) {
+            case 27: //ESC
+                if (automatic_complete == true) {
+                    console.log("Reverting autocomplete...");
+                    $(".text").val(withoutReplace);
+                    new_text = withoutReplace;
+                    old_text = withoutReplace;
+                }
+                break;
+            default:
+        }
+        automatic_complete = false;
         if (changed_index.operation === null) {
-            console.log(event.keyCode);
-            switch (event.keyCode) {
-                case 27: //ESC
-                    if (automatic_complete == true) {
-                        console.log("Reverting autocomplete...");
-                        $(".text").val(withoutReplace);
-                        new_text = withoutReplace;
-                        old_text = withoutReplace;
-                    }
-                    break;
-                case 38: //NAV UP
-                    if (navigating === true) {
-                        var select_options = $("#help-select option");
-                        if(select_options.size() > 0 && select_options[0].prop("")){
-                            
-                        }
-                        for (var index = 0; index < select_options.size(); index++) {
-                            select_options[index].remove();
-                        }
-                    }
-                    //check if is navigating
-                    //true
-                    //check if is in the top
-                    //true
-                    //focus on text, in the last position
-                    //false
-                    //go up in the list
-                    break;
-                case 40://NAV DOWN
-                    //check if is navigating
-                    //false
-                    //set is navigating = true
-                    //go down in the list
-                    break;
-                default:
-            }
-            automatic_complete = false;
             console.log("No change made.");
             return;
-        } else {
-           automatic_complete = false; 
         }
 
         var begin;
@@ -163,6 +175,21 @@ $(function () {
             }else{
                 console.log("Not perfect match");
             }
+            fillHelp("");
+        }else if(event.keyCode == 13){
+            var selected_option = $("#help-select option:selected");
+            console.log("Opção selecionada: " + selected_option.prop("id") + " | " 
+                    + selected_option.val());
+            
+            withoutReplace = new_text;
+            var withReplace = new_text.substring(0, begin) 
+                    + selected_option.val()
+                    + new_text.substring(changed_index.index, new_text.length);
+            //console.log("Without replace: " + withoutReplace);
+            //console.log("Without replace: " + withReplace);
+            $(".text").val(withReplace);
+            new_text = withReplace;
+            automatic_complete = true;
             fillHelp("");
         }else if(json != null){
             var newJSON = {};
@@ -214,7 +241,7 @@ function fillHelp(json) {
             insert += "selected";
         }
         index++;
-        insert +=">" + json[key].texto + "</option>";
+        insert +=" value=\"" + json[key].texto + "\">" + json[key].texto + "</option>";
         select.append(insert);
     }
 //    $.each(json, function (key, val) {
