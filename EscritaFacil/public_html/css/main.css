@@ -43,7 +43,7 @@ textarea{
     max-width: -webkit-calc(100% - 32px);
     max-width: -moz-calc(100% - 32px);
 
-    height: 300px;
+    height: 100px;
 
     text-align: justify;
     font-family: arial, sans-serif, helvetica;
